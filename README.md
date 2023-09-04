@@ -6,15 +6,17 @@ This is a fork of the original imgscalr library which
 - Has minimum compatibility bumped to java 9
 - Is repackaged and published under `dev.mccue`.
   - The original domain of `org.imagscalr` [was compromised](https://github.com/rkalla/imgscalr/commit/95dff70cfcd3da87639a64b07ab64d10c52eee5b)?!?
-- Has usages of the security manager removed
+- Has usages of the security manager removed since that is deprecated for removal
+
+## Usage
 
 ## NOTE
 
-Tests are failing - but they are entirely unaltered from the original repo.
-I will gladly accept PRs to fix them.
+A few tests are failing - but they are entirely unaltered from the original repo.
+I will gladly accept PRs to fix them, but I am content to repackage the software as-is otherwise.
 
 Original readme is below. Most of the links are broken and lead to malware, so I replaced them with links to
-the original sites on the wayback machine
+the original sites on the wayback machine.
 
 
 ----
