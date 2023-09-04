@@ -13,13 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.imgscalr;
+package dev.mccue.imgscalr;
 
-import static org.imgscalr.Scalr.OP_ANTIALIAS;
-import static org.imgscalr.Scalr.OP_BRIGHTER;
-import static org.imgscalr.Scalr.OP_DARKER;
-import static org.imgscalr.Scalr.OP_GRAYSCALE;
-import static org.imgscalr.Scalr.apply;
+import static dev.mccue.imgscalr.Scalr.OP_ANTIALIAS;
+import static dev.mccue.imgscalr.Scalr.OP_BRIGHTER;
+import static dev.mccue.imgscalr.Scalr.OP_DARKER;
+import static dev.mccue.imgscalr.Scalr.OP_GRAYSCALE;
+import static dev.mccue.imgscalr.Scalr.apply;
 
 import java.awt.image.BufferedImageOp;
 

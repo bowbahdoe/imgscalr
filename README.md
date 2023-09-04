@@ -1,5 +1,20 @@
+# imgscalr
+
+This is a fork of the original imgscalr library which
+
+- Has a module-info
+- Has minimum compatibility bumped to java 9
+- Is repackaged and published under `dev.mccue`.
+  - The original domain of `org.imagscalr` [was compromised]()?!?
+  - 
+- Has usages of the security manager removed
+
+Original readme is below. Most of the links are broken
+
+----
+
 imgscalr - Java Image-Scaling Library
-http://www.thebuzzmedia.com/software/imgscalr-java-image-scaling-library/
+`http://www.thebuzzmedia.com/software/imgscalr-java-image-scaling-library/`
 
 
 Changelog

@@ -13,14 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.imgscalr;
+package dev.mccue.imgscalr;
 
 import java.awt.image.BufferedImage;
 
 import junit.framework.Assert;
 
-import org.imgscalr.Scalr.Method;
-import org.imgscalr.Scalr.Mode;
+import dev.mccue.imgscalr.Scalr.Method;
+import dev.mccue.imgscalr.Scalr.Mode;
 import org.junit.Test;
 
 public class ScalrResizeTest extends AbstractScalrTest {

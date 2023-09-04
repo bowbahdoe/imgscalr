@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.imgscalr;
+package dev.mccue.imgscalr;
 
 import java.awt.Color;
 import java.awt.image.BufferedImage;
@@ -28,9 +28,9 @@ import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import org.imgscalr.Scalr.Method;
-import org.imgscalr.Scalr.Mode;
-import org.imgscalr.Scalr.Rotation;
+import dev.mccue.imgscalr.Scalr.Method;
+import dev.mccue.imgscalr.Scalr.Mode;
+import dev.mccue.imgscalr.Scalr.Rotation;
 
 /**
  * Class used to provide the asynchronous versions of all the methods defined in
@@ -520,14 +520,12 @@ public class AsyncScalr {
 		protected final String namePrefix;
 
 		DefaultThreadFactory() {
-			SecurityManager manager = System.getSecurityManager();
 
 			/*
 			 * Determine the group that threads created by this factory will be
 			 * in.
 			 */
-			group = (manager == null ? Thread.currentThread().getThreadGroup()
-					: manager.getThreadGroup());
+			group = Thread.currentThread().getThreadGroup();
 
 			/*
 			 * Define a common name prefix for the threads created by this

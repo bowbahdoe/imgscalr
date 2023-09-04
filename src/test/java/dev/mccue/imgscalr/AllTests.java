@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.imgscalr;
+package dev.mccue.imgscalr;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;

@@ -1,20 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-	<parent>
-		<groupId>org.sonatype.oss</groupId>
-		<artifactId>oss-parent</artifactId>
-		<version>7</version>
-	</parent>
-
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>org.imgscalr</groupId>
-	<artifactId>imgscalr-lib</artifactId>
-	<version>4.3-SNAPSHOT</version>
+
+	<groupId>dev.mccue</groupId>
+	<artifactId>imgscalr</artifactId>
+	<version>0.0.1</version>
 	<packaging>jar</packaging>
 
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>9</maven.compiler.source>
+		<maven.compiler.target>9</maven.compiler.target>
+	</properties>
+
 	<name>imgscalr - A Java Image Scaling Library</name>
-	<description>imgscalr is an simple and efficient best-practices image-scaling and manipulation library implemented in pure Java.</description>
-	<url>http://www.thebuzzmedia.com/software/imgscalr-java-image-scaling-library/</url>
+	<description>imgscalr is a simple and efficient best-practices image-scaling and manipulation library implemented in pure Java.</description>
+	<url>https://github.com/bowbahdoe/imgscalr</url>
+
+	<developers>
+		<developer>
+			<name>Ethan McCue</name>
+			<email>ethan@mccue.dev</email>
+			<organization>McCue Software Solutions</organization>
+			<organizationUrl>https://www.mccue.dev</organizationUrl>
+		</developer>
+	</developers>
+
 	<licenses>
 		<license>
 			<name>ASF 2.0</name>
@@ -24,35 +37,10 @@
 	</licenses>
 
 	<scm>
-		<connection>scm:git:git@github.com:thebuzzmedia/imgscalr.git</connection>
-		<developerConnection>scm:git:git@github.com:thebuzzmedia/imgscalr.git</developerConnection>
-		<url>git@github.com:thebuzzmedia/imgscalr.git</url>
+		<connection>scm:git:git://github.com/bowbahdoe/imgscalr.git</connection>
+		<developerConnection>scm:git:ssh://github.com:bowbahdoe/imgscalr.git</developerConnection>
+		<url>http://github.com/bowbahdoe/imgscalr/tree/main</url>
 	</scm>
-
-	<issueManagement>
-		<system>GitHub</system>
-		<url>https://github.com/thebuzzmedia/imgscalr/issues</url>
-	</issueManagement>
-
-	<developers>
-		<developer>
-			<email>software@thebuzzmedia.com</email>
-			<id>thebuzzmedia</id>
-			<name>Riyad Kalla</name>
-			<organization>The Buzz Media, LLC</organization>
-			<organizationUrl>https://github.com/thebuzzmedia</organizationUrl>
-			<url>http://www.thebuzzmedia.com/software/</url>
-		</developer>
-	</developers>
-
-	<organization>
-		<name>The Buzz Media, LLC</name>
-		<url>http://www.thebuzzmedia.com/software</url>
-	</organization>
-
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	</properties>
 
 	<dependencies>
 		<dependency>
@@ -68,54 +56,79 @@
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-source-plugin</artifactId>
-				<version>2.1.2</version>
-				<executions>
-					<execution>
-						<id>attach-sources</id>
-						<goals>
-							<goal>jar</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-javadoc-plugin</artifactId>
-				<version>2.8</version>
-				<executions>
-					<execution>
-						<id>attach-javadocs</id>
-						<goals>
-							<goal>jar</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-assembly-plugin</artifactId>
-				<version>2.2.1</version>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version>
 				<configuration>
-					<descriptorRefs>
-						<descriptorRef>jar-with-dependencies</descriptorRef>
-					</descriptorRefs>
+					<source>9</source>
+					<target>9</target>
+					<compilerArgs>
+						<arg>-Xlint:all</arg>
+						<arg>-Werror</arg>
+					</compilerArgs>
 				</configuration>
 			</plugin>
-			<!-- <plugin> -->
-			<!-- <groupId>org.apache.maven.plugins</groupId> -->
-			<!-- <artifactId>maven-gpg-plugin</artifactId> -->
-			<!-- <version>1.4</version> -->
-			<!-- <executions> -->
-			<!-- <execution> -->
-			<!-- <id>sign-artifacts</id> -->
-			<!-- <phase>verify</phase> -->
-			<!-- <goals> -->
-			<!-- <goal>sign</goal> -->
-			<!-- </goals> -->
-			<!-- </execution> -->
-			<!-- </executions> -->
-			<!-- </plugin> -->
 		</plugins>
 	</build>
+
+	<profiles>
+		<profile>
+			<id>release</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-javadoc-plugin</artifactId>
+						<version>3.4.1</version>
+						<executions>
+							<execution>
+								<id>attach-javadoc</id>
+								<goals>
+									<goal>jar</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-source-plugin</artifactId>
+						<version>3.2.1</version>
+						<executions>
+							<execution>
+								<id>attach-source</id>
+								<goals>
+									<goal>jar</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+					<plugin>
+						<groupId>org.jreleaser</groupId>
+						<artifactId>jreleaser-maven-plugin</artifactId>
+						<version>1.3.1</version>
+						<configuration>
+							<jreleaser>
+								<signing>
+									<active>ALWAYS</active>
+									<armored>true</armored>
+								</signing>
+								<deploy>
+									<maven>
+										<nexus2>
+											<maven-central>
+												<active>ALWAYS</active>
+												<url>https://s01.oss.sonatype.org/service/local</url>;
+												<closeRepository>true</closeRepository>
+												<releaseRepository>true</releaseRepository>
+												<stagingRepositories>target/staging-deploy</stagingRepositories>
+											</maven-central>
+										</nexus2>
+									</maven>
+								</deploy>
+							</jreleaser>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
 </project>
