@@ -6,15 +6,21 @@ This is a fork of the original imgscalr library which
 - Has minimum compatibility bumped to java 9
 - Is repackaged and published under `dev.mccue`.
   - The original domain of `org.imagscalr` [was compromised](https://github.com/rkalla/imgscalr/commit/95dff70cfcd3da87639a64b07ab64d10c52eee5b)?!?
-  - 
 - Has usages of the security manager removed
 
-Original readme is below. Most of the links are broken
+## NOTE
+
+Tests are failing - but they are entirely unaltered from the original repo.
+I will gladly accept PRs to fix them.
+
+Original readme is below. Most of the links are broken and lead to malware, so I replaced them with links to
+the original sites on the wayback machine
+
 
 ----
 
 imgscalr - Java Image-Scaling Library
-`http://www.thebuzzmedia.com/software/imgscalr-java-image-scaling-library/`
+https://web.archive.org/web/20150820081612/http://www.thebuzzmedia.com/software/imgscalr-java-image-scaling-library/
 
 
 Changelog
@@ -459,12 +465,12 @@ An example of how to do this looks like:
 
 Reference
 ---------
-Chris Campbell Incremental Scaling - http://today.java.net/pub/a/today/2007/04/03/perils-of-image-getscaledinstance.html
+Chris Campbell Incremental Scaling - https://web.archive.org/web/20070910153234/http://today.java.net/pub/a/today/2007/04/03/perils-of-image-getscaledinstance.html
 
 
 Related Projects
 ----------------
-ExifTool for Java - http://www.thebuzzmedia.com/software/exiftool-enhanced-java-integration-for-exiftool/
+ExifTool for Java - https://web.archive.org/web/20150326105438/http://www.thebuzzmedia.com/software/exiftool-enhanced-java-integration-for-exiftool/
 
 
 Contact
