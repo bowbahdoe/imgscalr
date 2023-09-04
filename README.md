@@ -5,10 +5,18 @@ This is a fork of the original imgscalr library which
 - Has a module-info
 - Has minimum compatibility bumped to java 9
 - Is repackaged and published under `dev.mccue`.
-  - The original domain of `org.imagscalr` [was compromised](https://github.com/rkalla/imgscalr/commit/95dff70cfcd3da87639a64b07ab64d10c52eee5b)?!?
+  - The original domain of `org.imgscalr` [was compromised](https://github.com/rkalla/imgscalr/commit/95dff70cfcd3da87639a64b07ab64d10c52eee5b)?!?
 - Has usages of the security manager removed since that is deprecated for removal
 
 ## Usage
+
+```xml
+<dependency>
+	<groupId>dev.mccue</groupId>
+	<artifactId>imgscalr</artifactId>
+	<version>0.0.1</version>
+</dependency>
+```
 
 ## NOTE
 
