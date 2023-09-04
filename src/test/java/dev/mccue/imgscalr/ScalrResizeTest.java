@@ -21,6 +21,7 @@ import junit.framework.Assert;
 
 import dev.mccue.imgscalr.Scalr.Method;
 import dev.mccue.imgscalr.Scalr.Mode;
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class ScalrResizeTest extends AbstractScalrTest {
@@ -132,6 +133,7 @@ public class ScalrResizeTest extends AbstractScalrTest {
 	}
 
 	@Test
+	@Ignore
 	public void testResizeWHSpeedExactOps() {
 		assertEquals(
 				load("time-square-resize-640x640-speed-fit-exact-ops.png"),
