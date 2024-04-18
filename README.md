@@ -14,7 +14,7 @@ This is a fork of the original imgscalr library which
 <dependency>
 	<groupId>dev.mccue</groupId>
 	<artifactId>imgscalr</artifactId>
-	<version>0.0.1</version>
+	<version>2023.09.03</version>
 </dependency>
 ```
 
